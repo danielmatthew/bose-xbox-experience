@@ -1,0 +1,205 @@
+/* Write your CSS! */
+
+html {
+  height: 100%;
+  background-image: url('/images/photoRoof4.jpg');
+  background-size: 120%;
+  background-position-y: 100%;
+  @include transition(all 0.2s);
+}
+
+body {
+  background-color: rgba(0,0,0,0.4);
+}
+
+.content-scroller {
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  height: 90%;
+}
+
+#title {
+  display: block;
+  width: 50%;
+  margin: 1em auto;
+}
+
+iframe {
+  border: 4px solid #fff;
+  @include box-shadow(0 1px 4px rgba(0,0,0,.2));
+}
+
+.content-wrapper {
+  width: 300%;
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+}
+
+.content {
+  // text-align: center;
+  box-sizing: border-box;
+  width: 33.33%;
+  overflow-y: scroll;
+  height: 100%;
+  float: left;
+  background: transparent;
+  -webkit-transition: background 0.3s linear;
+  -moz-transition: background 0.3s linear;
+  -o-transition: background 0.3s linear;
+  -ms-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+
+/******** colour switcher styles *****/
+.colourswitcher {
+  position: relative;
+  width: 60%;
+  height: 380px;
+  margin: auto;
+}
+
+.colourSwitcherPhoto1Holder{
+  position:absolute;
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.colourSwitcherPhoto1Holder img, .colourSwitcherPhoto2Holder img {
+  position:absolute;
+  opacity:0;
+  width: 100%;
+  height: auto;
+}
+
+.colourPalette {
+  width: 100%;
+  margin: 1em auto;
+  text-align: center;
+  z-index: 1001;
+  position: relative;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .colour {
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    border-radius: 40px;
+    margin: 0 1em;
+    cursor: pointer;
+    @include transition(all .4s ease);
+
+    &:hover {
+      @include transform(scale(1.2));
+    }
+  }
+}
+
+.colourSwitcherSlider {
+  width:480px;
+  height: 60px;
+
+  margin: auto;
+  z-index:50;
+}
+
+.colourSwitcherSlider span{
+  display:block;
+  float:left;
+  width:150px;
+  margin-top:20px;
+  margin-right:2px;
+  height:20px;
+}
+
+.colourSwitcherSlider table{
+  width:480px;
+  border-collapse: collapse;
+  height:16px;
+  /*z-index:50;*/
+}
+
+.sliderHolder{
+  height:60px;
+  width:480px;
+  position:absolute;
+  top:-20px;
+  /*z-index:50;*/
+}
+
+.sliderKnob{
+  width:45px;
+  height:60px;
+  /*-webkit-border-radius: 4px;
+  background-color:black;*/
+  cursor:pointer;
+  position:relative;
+  left:0px;
+}
+
+.sliderKnobInner {
+  width:25px;
+  height:60px;
+  -webkit-border-radius: 4px;
+  background-color:black;
+  margin: 0px auto;
+}
+
+.hs-menu{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 10%;
+  padding: 1em 0;
+
+  background-color: transparent; 
+  text-align: center;
+  line-height: 3;
+}
+
+.dpad {
+  position: absolute;
+  z-index: 1001;
+  bottom: 0;
+  left: 0;
+}
+
+.controls a {
+    display: inline-block;
+    width: 25%;
+    // border: 2px solid #EA540D;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background-color: #444;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 1em;
+    @include transition(all .2s ease-in-out);
+}
+
+.controls a:hover {
+  background-color: #444;
+  color: #EA540D;  
+}
+
+.controls a.selected {
+  background-color: #EA540D;
+  color: white;
+} 
+
+.controls a:active {
+  background-color: #EA540D;
+  color: white;
+}
+
